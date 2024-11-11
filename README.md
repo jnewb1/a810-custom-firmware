@@ -1,12 +1,9 @@
 # 70mai A810 Dashcam firmware customizations
 
 
-<<<<<<< HEAD
 Disclaimer: This software is provided "as is," with no warranties or guarantees. The author(s) are not responsible for any damage, data loss, or legal violations resulting from its use.
 
 
-=======
->>>>>>> 4bd92d87383a83e788cb25f1f4232ffc7a8107fe
 |  Rear   |  Front |
 | :------: | :-----: |
 | [![a810_front](docs/810_front.webp)](https://70mai.store/products/dash-cam-a810) | [![a810_rear](docs/810_rear.webp)](https://70mai.store/products/dash-cam-a810) |
