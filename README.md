@@ -36,7 +36,6 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
 |  rootfs | cpio | root file system, lots of libraries |
 |  app    | ubi  | contains AI models, boot logos, sounds |
 |  rootfs1 | ubi | more root file system stuff |
- ```
 
 ```
 1. Paste the firmware in the root of the SD card.
