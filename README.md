@@ -40,7 +40,7 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
 
 
 ```
-1. Paste the firmware in the root of the SD card.
+1. Paste the firmware in the root of the SD card, renamed to "FW98529.bin"
 2. Make sure the device is completely off.
 3. Insert the SD card.
 4. Press and hold the button 4 (most right) and power button and plug in USB cable.
