@@ -1,8 +1,9 @@
 #!/bin/bash
 
+TAG=a810-builder
 
-docker buildx create --name a810_builder
+docker buildx create --name builder
 
-docker buildx --builder a810_uilder build -t a810-builder . --platform=linux/arm64 --load --progress=plain
+docker buildx --builder builder build -t $TAG . --platform=linux/arm64 --load --progress=plain
 
-docker run -v .:/opt/code --rm --privileged -it a810-builder bash
+docker run -v .:/opt/code --rm --privileged -it $TAG bash
