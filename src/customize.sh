@@ -2,14 +2,19 @@
 
 source src/common.sh
 
-cp -r customizations/* extracted/$FIRMWARE-uncomp_partitionID9/997146770/app
+APP_PART=9
+APP_DIR=997146770
 
+function apply_customizations() {
+    cp -r customizations/* extracted/$FIRMWARE-uncomp_partitionID$APP_PART/$APP_DIR/app
+}
 
 function pack_app() {
-   $RUN cp original/$FIRMWARE customized/
-
-   $RUN python /opt/ntfwinfo/NTKFWinfo.py -i customized/$FIRMWARE -c 9 -o extracted
+   $RUN /bin/bash -c "cp original/$FIRMWARE customized/ && \
+        pushd customized && \
+        python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -c $APP_PART -o ../extracted"
 }
 
 
+apply_customizations
 pack_app
