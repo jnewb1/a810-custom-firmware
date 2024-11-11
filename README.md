@@ -29,7 +29,6 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
   12    rtos             0x0337B16C - 0x0344B9E4         854,136     0x0000     0x0000     unknown part
   13    fdt.app          0x0344B9EC - 0x0344BA72             134     0x0000     0x0000     device tree blob (dtb)
  ----------------------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
 ```
 
 |  Partition Name   |  Type  |  Description |
@@ -37,14 +36,12 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
 |  rootfs | cpio | root file system, lots of libraries |
 |  app    | ubi  | contains AI models, boot logos, sounds |
 |  rootfs1 | ubi | more root file system stuff |
-=======
  ```
 
 ```
-Unzip and paste the firmware in the root of the SD card.
-Make sure the device is completely off.
-Insert the SD card.
-Press and hold the button 4 (most right) and power button and plug in USB cable.
-The device will start updating.
+1. Paste the firmware in the root of the SD card.
+2. Make sure the device is completely off.
+3. Insert the SD card.
+4. Press and hold the button 4 (most right) and power button and plug in USB cable.
+5. The device will start updating.
 ```
->>>>>>> 4bd92d87383a83e788cb25f1f4232ffc7a8107fe
