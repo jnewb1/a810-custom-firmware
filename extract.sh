@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FIRMWARE="A810_FW98529A_1.3.72ww_20231008.bin"
+FIRMWARE="A810_FW98529A_1.5.93ww_20240724.bin"
 
 docker build -t ntfwinfo .
 
@@ -29,11 +29,10 @@ function extract_cpio() {
 
 
 function extract_extras() {
-    extract_cpio 5
     extract_cpio 8
 }
 
 
-#bin_info
+bin_info
 extract_from_bin
 extract_extras
