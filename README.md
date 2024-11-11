@@ -1,6 +1,9 @@
 # 70mai A810 Dashcam firmware customizations
 
 
+Disclaimer: This software is provided "as is," with no warranties or guarantees. The author(s) are not responsible for any damage, data loss, or legal violations resulting from its use.
+
+
 |  Rear   |  Front |
 | :------: | :-----: |
 | [![a810_front](docs/810_front.webp)](https://70mai.store/products/dash-cam-a810) | [![a810_rear](docs/810_rear.webp)](https://70mai.store/products/dash-cam-a810) |
@@ -26,4 +29,10 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
   12    rtos             0x0337B16C - 0x0344B9E4         854,136     0x0000     0x0000     unknown part
   13    fdt.app          0x0344B9EC - 0x0344BA72             134     0x0000     0x0000     device tree blob (dtb)
  ----------------------------------------------------------------------------------------------------------------------
- ```
+```
+
+|  Partition Name   |  Type  |  Description |
+| :------: | :-----: |
+|  rootfs | cpio | root file system, lots of libraries |
+|  app    | ubi  | contains AI models, boot logos, sounds |
+|  rootfs1 | ubi | more root file system stuff |
