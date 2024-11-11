@@ -1,9 +1,12 @@
 # 70mai A810 Dashcam firmware customizations
 
 
+<<<<<<< HEAD
 Disclaimer: This software is provided "as is," with no warranties or guarantees. The author(s) are not responsible for any damage, data loss, or legal violations resulting from its use.
 
 
+=======
+>>>>>>> 4bd92d87383a83e788cb25f1f4232ffc7a8107fe
 |  Rear   |  Front |
 | :------: | :-----: |
 | [![a810_front](docs/810_front.webp)](https://70mai.store/products/dash-cam-a810) | [![a810_rear](docs/810_rear.webp)](https://70mai.store/products/dash-cam-a810) |
@@ -29,6 +32,7 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
   12    rtos             0x0337B16C - 0x0344B9E4         854,136     0x0000     0x0000     unknown part
   13    fdt.app          0x0344B9EC - 0x0344BA72             134     0x0000     0x0000     device tree blob (dtb)
  ----------------------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 ```
 
 |  Partition Name   |  Type  |  Description |
@@ -36,3 +40,14 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
 |  rootfs | cpio | root file system, lots of libraries |
 |  app    | ubi  | contains AI models, boot logos, sounds |
 |  rootfs1 | ubi | more root file system stuff |
+=======
+ ```
+
+```
+Unzip and paste the firmware in the root of the SD card.
+Make sure the device is completely off.
+Insert the SD card.
+Press and hold the button 4 (most right) and power button and plug in USB cable.
+The device will start updating.
+```
+>>>>>>> 4bd92d87383a83e788cb25f1f4232ffc7a8107fe
