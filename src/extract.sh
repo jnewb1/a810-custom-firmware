@@ -10,8 +10,7 @@ function bin_info() {
 function extract_from_bin() {
     partition=$1
     $RUN /bin/bash -c "pushd original && \
-         python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -u $partition -o ../extracted && \
-         popd original"
+         python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -u $partition -o ../extracted"
 }
 
 
