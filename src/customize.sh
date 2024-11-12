@@ -6,7 +6,7 @@ APP_PART=9
 APP_DIR=997146770
 
 function apply_customizations() {
-    cp -r customizations/* extracted/$FIRMWARE-uncomp_partitionID$APP_PART/$APP_DIR/app
+    cp -r customizations/app/* extracted/$FIRMWARE-uncomp_partitionID$APP_PART/$APP_DIR/app
 }
 
 function pack_app() {
