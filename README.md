@@ -45,5 +45,27 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
 3. Insert the SD card and power on device. Will start updating.
 
 ## Modifications
-- Custom logo
+- Custom logos
+
+![](docs/logo.jpg)
+
 - root ftp on 8021
+
+```
+justin@ubuntu-24:~/a810-custom-firmware$ curl ftp://root:@192.168.0.1:8021
+total 4
+drwxrwxr-x    2 root     root             0 Nov 12  2024 bin
+drwxr-xr-x    3 root     root             0 Nov 11 20:40 dev
+drwxrwxr-x    9 root     root             0 Nov 12  2024 etc
+-rwxrwxr-x    1 root     root           561 Nov 12  2024 init
+drwxrwxr-x    9 root     root             0 Nov 12  2024 lib
+lrwxrwxrwx    1 root     root            11 Nov 12  2024 linuxrc -> bin/busybox
+drwxrwxr-x   16 root     root             0 Nov 12  2024 mnt
+dr-xr-xr-x  167 root     root             0 Jan  1  1970 proc
+drwxrwxr-x    2 root     root             0 Nov 12  2024 root
+drwxrwxr-x    2 root     root             0 Nov 12  2024 sbin
+dr-xr-xr-x   11 root     root             0 Nov 11 20:40 sys
+drwxrwxrwt    2 root     root             0 Nov 11 20:40 tmp
+drwxrwxr-x    6 root     root             0 Nov 12  2024 usr
+drwxrwxr-x    7 root     root             0 Nov 12  2024 var
+```
