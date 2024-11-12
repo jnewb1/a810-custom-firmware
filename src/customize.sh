@@ -25,7 +25,7 @@ function customize_cpio() {
 
    $RUN rm -f $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID${partition}
 
-   $RUN /bin/bash -c "pushd $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID${partition}_cpio && find . | cpio --create -v > ../$FIRMWARE-uncomp_partitionID${partition}"
+   $RUN /bin/bash -c "pushd $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID${partition}_cpio && find . | cpio --create -H newc -v > ../$FIRMWARE-uncomp_partitionID${partition}"
 
    $RUN /bin/bash -c "pushd customized && \
         python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -c $partition -o ../$CUSTOMIZE_WORKDIR"
