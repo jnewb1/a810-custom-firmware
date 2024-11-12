@@ -1,5 +1,5 @@
 """
-The firmware is particular about BootLogo. It needs to be the exact format and not too big.
+The firmware is particular about BootLogo. It needs to be the exact same format (size, no rotations, etc) and not too big.
 """
 
 import argparse
