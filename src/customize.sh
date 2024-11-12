@@ -2,22 +2,37 @@
 
 source src/common.sh
 
-APP_PART=9
-APP_DIR=997146770
+CUSTOMIZE_WORKDIR=.customize
 
-function apply_customizations() {
-    rm -r .workdir
-    mkdir .workdir
-    cp -r extracted/* .workdir
-    cp -r customizations/app/* .workdir/$FIRMWARE-uncomp_partitionID$APP_PART/$APP_DIR/app
-}
+function customize_compressed() {
+   name=$1
+   partition=$2
 
-function pack_app() {
-   $RUN /bin/bash -c "cp original/$FIRMWARE customized/ && \
-        pushd customized && \
-        python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -c $APP_PART -o ../.workdir"
+   cp -r customizations/$1/* $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID$partition
+
+   $RUN /bin/bash -c "pushd customized && \
+        python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -c $partition -o ../$CUSTOMIZE_WORKDIR"
 }
 
 
-apply_customizations
-pack_app
+function customize_cpio() {
+   name=$1
+   partition=$2
+
+   cp -r customizations/$1/* $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID${partition}_cpio
+
+   cpio --create -d -m -v --file $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID${partition} --directory $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID${partition}_cpio
+
+   $RUN /bin/bash -c "pushd customized && \
+        python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -c $partition -o ../$CUSTOMIZE_WORKDIR"
+}
+
+
+cp original/$FIRMWARE customized/
+
+rm -r $CUSTOMIZE_WORKDIR
+mkdir $CUSTOMIZE_WORKDIR
+cp -r extracted/* $CUSTOMIZE_WORKDIR
+
+customize_compressed app 9
+customize_cpio rootfs 8
