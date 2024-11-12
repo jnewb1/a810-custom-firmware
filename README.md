@@ -39,8 +39,11 @@ Firmware file ORIG_CRC:0xB431 CALC_CRC:0xB431
 |  rootfs1 | ubi | more root file system stuff |
 
 
-```
+## Installation
 1. Paste the firmware in the root of the SD card, renamed to "FW98529.bin"
 2. Make sure the device is completely off.
 3. Insert the SD card and power on device. Will start updating.
-```
+
+## Modifications
+- Custom logo
+- root ftp on 8021
