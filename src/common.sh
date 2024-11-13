@@ -7,3 +7,4 @@ docker build -t ntfwinfo -f src/Dockerfile.extract src
 RUN="docker run -v .:/opt/code -w /opt/code -t ntfwinfo"
 
 EXTRACT_DIR=extracted
+CUSTOMIZE_WORKDIR=.customize

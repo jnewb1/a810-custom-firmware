@@ -2,7 +2,6 @@
 
 source src/common.sh
 
-CUSTOMIZE_WORKDIR=.customize
 
 function customize_compressed() {
    echo "customize_compressed: $1 ($2)..."
@@ -41,6 +40,7 @@ function customize_all() {
 
     customize_cpio rootfs 8
     customize_compressed app 9
+    customize_compressed rootfs2 11
 }
 
 customize_all
