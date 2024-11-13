@@ -1,9 +1,7 @@
-#!/bin/bash
+#!/bin/bash -e
 
 TAG=a810-builder
 
-docker buildx create --name builder
+docker buildx --builder builder build -f src/Dockerfile.compile -t $TAG . --platform=linux/armhf --load --progress=plain
 
-docker buildx --builder builder build -t $TAG . --platform=linux/arm64 --load --progress=plain
-
-docker run -v .:/opt/code --rm --privileged -it $TAG bash
+docker run -v .:/opt/code -w /opt/code --rm --privileged -it $TAG bash
