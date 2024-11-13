@@ -8,7 +8,7 @@ function customize_compressed() {
    name=$1
    partition=$2
 
-   cp -r customizations/$1/* $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID$partition
+   cp -r customizations/$1/. $CUSTOMIZE_WORKDIR/$FIRMWARE-uncomp_partitionID$partition
 
    $RUN /bin/bash -c "pushd customized && \
         python /opt/ntfwinfo/NTKFWinfo.py -i $FIRMWARE -c $partition -o ../$CUSTOMIZE_WORKDIR"
