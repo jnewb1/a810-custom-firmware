@@ -1,5 +1,6 @@
 """
 The firmware is particular about BootLogo. It needs to be the exact same format (size, no rotations, etc) and not too big.
+This script will resize a square image into the correct format for these logos.
 """
 
 import argparse
