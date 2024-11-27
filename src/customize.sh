@@ -40,7 +40,7 @@ function customize_all() {
 
     customize_cpio rootfs 8
     customize_compressed app 9
-    customize_compressed rootfs2 11
+    customize_compressed rootfs1 11
 }
 
 customize_all
