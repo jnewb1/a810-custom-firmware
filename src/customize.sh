@@ -34,7 +34,7 @@ function customize_cpio() {
 function customize_all() {
     cp original/$FIRMWARE customized/
 
-    rm -r $CUSTOMIZE_WORKDIR
+    rm -rf $CUSTOMIZE_WORKDIR
     mkdir $CUSTOMIZE_WORKDIR
     cp -r $EXTRACT_DIR/* $CUSTOMIZE_WORKDIR
 
