@@ -1,4 +1,5 @@
 *.extracted
 extracted/
+customized/
 .customize
 ftp
