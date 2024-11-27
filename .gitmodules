@@ -1,0 +1,3 @@
+[submodule "nt9852x_linux_ltd"]
+    path = nt9852x_linux_ltd
+    url = ~/nt9852x_linux_ltd
